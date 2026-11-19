@@ -34,7 +34,8 @@ const submit = async () => {
 </script>
 
 <template>
-  <div class="card">
+  <div class="center">
+    <div class="card">
       <h2>Register</h2>
       <input v-model="name" placeholder="Name" />
       <input v-model="email" placeholder="Email" />
@@ -42,6 +43,8 @@ const submit = async () => {
       <input v-model="interests" placeholder="Interests (comma separated)" />
       <button @click="submit">Register</button>
       <p v-if="error" class="error">{{ error }}</p>
-      <p class="link">Have an account? <RouterLink to="/login">Login</RouterLink></p>
+      <p class="link">Have an account? <RouterLink to="/login">Login</RouterLink>
+      </p>
     </div>
+  </div>
 </template>
