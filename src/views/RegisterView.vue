@@ -34,14 +34,14 @@ const submit = async () => {
 </script>
 
 <template>
-  <div class="register">
-    <h2>Register</h2>
-    <input v-model="name" placeholder="Name" />
-    <input v-model="email" placeholder="Email" />
-    <input v-model="password" type="password" placeholder="Password" />
-    <input v-model="interests" placeholder="Interests (comma separated)" />
-    <button @click="submit">Register</button>
-    <p v-if="error">{{ error }}</p>
-    <p><RouterLink to="/login">Login</RouterLink></p>
-  </div>
+  <div class="card">
+      <h2>Register</h2>
+      <input v-model="name" placeholder="Name" />
+      <input v-model="email" placeholder="Email" />
+      <input v-model="password" type="password" placeholder="Password" />
+      <input v-model="interests" placeholder="Interests (comma separated)" />
+      <button @click="submit">Register</button>
+      <p v-if="error" class="error">{{ error }}</p>
+      <p class="link">Have an account? <RouterLink to="/login">Login</RouterLink></p>
+    </div>
 </template>

@@ -29,14 +29,14 @@
 </script>
 
 <template lang="html">
-    <div class="login">
+   <div class="card">
         <h2>Login</h2>
         <input v-model="email" placeholder="Email" />
         <input v-model="password" type="password" placeholder="Password" />
         <button @click="submit">Login</button>
-        <p v-if="error">{{ error }}</p>
-        <p><RouterLink to="/register">Register</RouterLink></p>
-    </div>
+        <p v-if="error" class="error">{{ error }}</p>
+        <p class="link">No account? <RouterLink to="/register">Register</RouterLink></p>
+  </div>
 </template>
 
 <style lang="css">
