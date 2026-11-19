@@ -230,3 +230,26 @@ button.red:hover {
   margin-top: 14px;
   font-size: 14px;
 }
+
+/* Select box (same look as inputs) */
+select {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* Small grey helper text */
+.meta {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Navbar links spacing */
+.bar {
+  margin-bottom: 8px;
+}

@@ -2,6 +2,7 @@
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import http from "@/api/http";
+import NavBar from "@/components/NavBar.vue";
 
 const router = useRouter();
 const user = JSON.parse(localStorage.getItem("user") || "{}");
@@ -92,15 +93,9 @@ onMounted(load);
 </script>
 
 <template>
-  <h1>Notes Taking App (Guide Care)</h1>
   <div class="wide">
-    <div class="bar">
-      <span>Hi, {{ user.name }} ({{ user.role }})</span>
-      <span class="bar-right">
-        <RouterLink v-if="user.role === 'admin'" to="/admin">Admin</RouterLink>
-        <button class="small" @click="logout">Logout</button>
-      </span>
-    </div>
+
+    <NavBar />
 
     <div class="card full">
       <h2>{{ editingId ? "Edit Note" : "New Note" }}</h2>
